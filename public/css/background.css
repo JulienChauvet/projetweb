@@ -1,0 +1,17 @@
+body {
+	color:white;
+	background-color:black;
+	background-image: url(../Image/FondConnect.jpg);
+}
+
+.backGL {
+	color:white;
+}
+
+footer {
+	color:white;
+}
+
+header h1 {
+	color:red;
+}
