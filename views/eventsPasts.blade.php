@@ -44,7 +44,7 @@
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <p>{{$event->DateEvent}} - {{$event->Recurrence}}</p>
                     <p>{{$event->Description}}</p>
-                    <a href="/informations_évènement_passés"><p>voir plus >></p></a>
+                    <a href="/informations_évènement_passé:{{$event->id}}"><p>voir plus >></p></a>
                   </div>
                 </div>
               </div>

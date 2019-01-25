@@ -24,10 +24,19 @@ class Users extends Model implements Authenticatable {
     	return '';
     }
 
-
     public function get_id($email) {
         $id = Users::where('Email', $email)->first()->id;
         return $id;
+    }
+
+    public function get_UsersForCommentsId($comments) {
+        $users = array();
+        foreach ($comments as $commentArray) {
+            foreach ($commentArray as $comment) {
+                array_push($users, Users::where('id',$comment->id_users)->get());
+            }
+        }
+        return $users;
     }
 
 }
