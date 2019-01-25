@@ -29,14 +29,22 @@ class Users extends Model implements Authenticatable {
         return $id;
     }
 
-    public function get_UsersForCommentsId($comments) {
+    public function get_UsersForCommentsId($pictures, $comments) {
         $users = array();
-        foreach ($comments as $commentArray) {
-            foreach ($commentArray as $comment) {
-                array_push($users, Users::where('id',$comment->id_users)->get());
+        for ($i=0; $i < sizeof($pictures) ; $i++) { 
+            foreach ($comments[$i] as $comment) {
+                $request = Users::where('id',$comment->id_users)->first();
+                if (in_array($request, $users) == false) {
+                    array_push($users, $request);
+                }   
             }
         }
         return $users;
+    }
+
+    public function get_UserById($id) {
+        $user = Users::where('id', $id)->first();
+        return $user;
     }
 
 }

@@ -12,7 +12,7 @@ class Events extends Model
 	public $timestamps = false; // ignore la date de création/modification
 
 	public function get_EventsByDate($signe) { // < = Pasts events   |   > = Futurs events
-        $events = Events::where('DateEvent',$signe,Carbon::now()->toDateTimeString())->get();
+        $events = Events::where('DateEvent',$signe,Carbon::now()->toDateTimeString())->where('Suggest', 0)->get();
         return $events;
     }
 
@@ -20,4 +20,11 @@ class Events extends Model
     	$events = Events::where('id',$id)->first();
         return $events;
     }
+
+    public function get_EventSuggested() {
+        $events = Events::where('Suggest',1)->get();
+        return $events;
+    }
+
+
 }

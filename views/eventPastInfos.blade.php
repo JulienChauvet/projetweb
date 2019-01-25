@@ -22,36 +22,30 @@
     <div class=col-lg-4>
     </div>
   </div>
-  @foreach($pictures as $picture)
+  @for ($i=0; $i < sizeof($pictures); $i++)
   <hr>
   <div class="row">
     <div class="col-lg-11">
       <div class="col-lg-6 col-md-6 col-sm-6">
-        <img src="{{$picture->Link}}" style="width: 100%" alt="photo évènements">
+        <img src="{{$pictures[$i]->Link}}" style="width: 100%" alt="photo évènements">
       </div>
-
       <div class="col-lg-1 col-md-1 col-sm-1">
         <a class="btn like">
           <i class="far fa-thumbs-up bleu"></i>
         </a>
       </div>
-
       <div class="col-lg-5 col-md-5 col-sm-5">
         <div class="scrollbar">
           <div class="col-lg-12 col-md-12 col-sm-12">
-           @foreach($comments as $commentArray)
-           @foreach($commentArray as $comment)
-           @foreach($authors as $author)
-           @if ($comment->id_Pictures == $picture->id)
+           @foreach($comments[$i] as $comment)
            <div class="commentaire">
-
-            <h5 class="blanc" alt="nom utilisateur commentaire">{{$author[0]->Firstname}} {{$author[0]->Lastname}}:</h5>
-
+            @for ($n=0; $n < sizeof($authors); $n++)
+            @if ($comment->id_users == $authors[$n]->id)
+            <h5 class="blanc" alt="nom utilisateur commentaire">{{$authors[$n]->Firstname}} {{$authors[$n]->Lastname}}:</h5>
+            @endif
+            @endfor
             <p class="blanc">{{$comment->Content}}</p>
           </div>
-          @endif
-          @endforeach
-          @endforeach
           @endforeach
         </div>
       </div>
@@ -63,7 +57,7 @@
   </div>
 </div>
 <hr>
-@endforeach
+@endfor
 
 </div>
 <script type="text/javascript" src="../js/script.js"></script>

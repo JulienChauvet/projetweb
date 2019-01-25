@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 class IdeaController extends Controller
 {
     public function page() {
-    	return view('idea');
+    	$events = new \App\Events;
+    	$events = $events->get_EventSuggested('>');
+    	return view('idea', ['events' => $events]);
 	}
 
-	public function add_idea() {
-	
-	}
 }

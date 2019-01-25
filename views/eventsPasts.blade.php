@@ -10,7 +10,7 @@
   </div>
   <div class="col-lg-10 col-md-10 col-sm-10">
     <div class="jumbotron jumbotron-fluid jambon">
-      <div class="container">S
+      <div class="container">
         <h1 class="display-4"><b>Les événements passés !</b></h1>
         <p class="lead"><b>Postez des photos et des commentaires, faites vous plaisirs ;)</b></p>
       </div>
@@ -60,7 +60,6 @@
 @endforeach
 
 <br>
-
 <br>
 <br>
 <br>
@@ -83,10 +82,4 @@
 <br>
 <br>
 <br>
-<br>
-
-
-
-
-
 @endsection

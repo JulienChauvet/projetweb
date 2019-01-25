@@ -7,12 +7,12 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     @foreach($categories as $categorie)
-    <a href="#">{{$categorie->Name}}</a>
+    <a href="/categorie:{{$categorie->id}}">{{$categorie->Name}}</a>
     @endforeach
   </div>
   <span id="openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Boutique</span>
 </div>
-
+<div><a href="/nouvel_article">Ajouter un article</a></div>
 @foreach($articles as $article)
 <div class="row">
   <div class="col-lg-6">
@@ -37,14 +37,9 @@
       <button type="button" class="btn orange"><b>ADD TO CART >><b></button>
         <p>Qté : <p>
          <input class="input-number test" type="number" value="1" min="0" max="1000">
-         <p>Taille : </p>
-         <button class="btn btn-default" type="submit">S</button>
-         <button class="btn btn-default" type="submit">M</button>
-         <button class="btn btn-default" type="submit">L</button>
-         <button class="btn btn-default" type="submit">XL</button>
        </div>
        <div class="col-lg-6">
-        <img src="../Image/boutique1_1.png" alt="test" id="grande">
+        <img src="{{ url('storage/' . $article->PictureLink) }}" class="image-link" alt="image" id="grande">
       </div>
     </div>
   </div>

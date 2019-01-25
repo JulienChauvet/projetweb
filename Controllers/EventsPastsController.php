@@ -29,15 +29,11 @@ class EventsPastsController extends Controller
     		$comments = $comments->get_CommentsForPicturesId($pictures);
 
     		$authors = new \App\Users;
-    		$authors = $authors->get_UsersForCommentsId($comments);
+    		$authors = $authors->get_UsersForCommentsId($pictures, $comments);
 
 	    	$likes = new \App\Likes;
     	}
 
-    	/*foreach($authors as $author) {
-    		var_dump($author);
-    		return "fin.";
-   		}*/
     	return view('eventPastInfos', ['event' => $event, 'pictures' => $pictures, 'comments' => $comments, 'authors' => $authors, 'likes' => $likes]);
 	}
 
