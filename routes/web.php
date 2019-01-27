@@ -45,20 +45,9 @@ Route::post('/nouvelle_catégorie','NewCategoryController@addCategory');
 Route::get('/nouvel_article','NewArticleController@page');
 Route::post('/nouvel_article','NewArticleController@addArticle');
 
-
 // IDEA CONTROLLER 
 Route::get('/boîte_à_idée','IdeaController@page');
 Route::POST('/ajout_suggestion','IdeaController@add_idea');
 
-
-
 // ACCOUNT CONTROLLER 
 Route::get('/compte','AccountController@page');
-
-
-
-
-
-// test CONTROLLER
-Route::view('/Sevent','SuggestEvent');
-Route::view('/newArticle','NewArticle');
