@@ -67,7 +67,7 @@
           <div class ="row">
             <div class="col-lg-4 col-md-4 col-sm-4">
              <!-- Trigger the Modal -->
-             <img class="img-responsive" src="{{$event->PictureLink}}" alt="{{$event->Title}}" style="width:90%;max-width:200px; max-height: 250px;">
+             <img class="img-responsive" src="{{ url('storage/' . $event->PictureLink) }}" alt="{{$event->Title}}" style="width:90%;max-width:200px; max-height: 250px;">
              <!-- The Modal -->
              <div id="myModal" class="modal">
              </div> 
@@ -96,7 +96,7 @@
         <div class="mb-1 text-muted">{{$event->DateEvent}}</div>
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-4">
-            <img src="{{$event->PictureLink}}" class="img-responsive" alt="{{$event->Title}}" style="width:90%;max-width:200px; max-height: 250px;">
+            <img src="{{ url('storage/' . $event->PictureLink) }}" class="img-responsive" alt="{{$event->Title}}" style="width:90%;max-width:200px; max-height: 250px;">
           </div>
           <div id="myModal2" class="modal2">
           </div> 

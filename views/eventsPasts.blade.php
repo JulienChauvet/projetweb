@@ -39,7 +39,7 @@
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6">
-                    <img class="taille" src="{{$event->PictureLink}}" alt="event">
+                    <img class="taille" src="{{ url('storage/' . $event->PictureLink) }}" alt="event">
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <p>{{$event->DateEvent}} - {{$event->Recurrence}}</p>

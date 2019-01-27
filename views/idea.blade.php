@@ -28,7 +28,7 @@
 				<div class="flip-card">
 					<div class="flip-card-inner">
 						<div class="flip-card-front">
-							<img src="./Image/imagetest2.jpg" alt="Avatar" class="tailleimg">
+							<img src="{{ url('storage/' . $event->PictureLink) }}" alt="Avatar" class="tailleimg">
 						</div>
 						<div class="flip-card-back">
 							<h1>{{$event->Title}}</h1>
@@ -47,7 +47,7 @@
 				<div class="flip-card">
 					<div class="flip-card-inner">
 						<div class="flip-card-front">
-							<img src="./Image/foot.jpg" alt="Avatar" class="tailleimg">
+							<img src="{{ url('storage/' . $event->PictureLink) }}" alt="Avatar" class="tailleimg">
 						</div>
 						<div class="flip-card-back">
 							<h1>{{$event->Title}}</h1>

@@ -10,7 +10,7 @@
         <div class="col-lg-2">
         </div>
         <div class="col-lg-4 col-md-2 col-sm-2">
-            <img src="{{$event->PictureLink}}" alt="img principal event" id="mainImg" class="taille">
+            <img src="{{ url('storage/' . $event->PictureLink) }}" alt="img principal event" id="mainImg" class="taille">
         </div>
         <div class="col-lg-6 text-white p-md-10 big">
           <h1 class="display-4 font-italic">{{$event->Title}}</h1>

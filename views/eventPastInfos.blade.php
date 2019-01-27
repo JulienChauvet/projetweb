@@ -12,7 +12,7 @@
     </div>
 
     <div class="col-lg-2 col-md-2 col-sm-2">
-      <img src="{{$event->PictureLink}}" alt="img principal event" id="mainImg">
+      <img src="{{ url('storage/' . $event->PictureLink) }}" alt="img principal event" id="mainImg">
     </div>
     <div class="col-lg-4 text-white p-md-10 big">
       <h1 class="display-4 font-italic">{{$event->Title}}</h1>
@@ -27,7 +27,7 @@
   <div class="row">
     <div class="col-lg-11">
       <div class="col-lg-6 col-md-6 col-sm-6">
-        <img src="{{$pictures[$i]->Link}}" style="width: 100%" alt="photo évènements">
+        <img src="{{ url('storage/' . $pictures[$i]->Link) }}" style="width: 100%" alt="photo évènements">
       </div>
       <div class="col-lg-1 col-md-1 col-sm-1">
         <a class="btn like">

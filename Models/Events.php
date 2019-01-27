@@ -21,6 +21,14 @@ class Events extends Model
         return $events;
     }
 
+    public function get_EventsByParticipation($participations) {
+        $events = Array();
+        foreach ($participations as $participation) {
+            array_push($events, Events::where('id',$participation->id)->where('DateEvent','>',Carbon::now()->toDateTimeString())->first());
+        }
+        return $events;
+    }
+
     public function get_EventSuggested() {
         $events = Events::where('Suggest',1)->get();
         return $events;

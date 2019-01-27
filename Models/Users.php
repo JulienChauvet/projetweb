@@ -12,7 +12,7 @@ class Users extends Model implements Authenticatable {
 	protected $table = "_users"; // la table à utiliser
 	public $timestamps = false; // ignore la date de création/modification
 
-	 protected $fillable = ['Email', 'Password'];
+	protected $fillable = ['Email', 'Password'];
 
     use BasicAuthenticatable;
 
