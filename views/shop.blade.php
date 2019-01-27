@@ -21,7 +21,7 @@
       <img src="../Image/boutique2.png" alt="exia" class="circle" id="tooLarge">
     </div>
     <h1 class="titre">{{$article->Name}}</h1><br>
-    <h1 class="subtitre">{{$article->Price}}</h1>
+    <h1 class="subtitre">{{$article->Price}} €</h1>
     <p>{{$article->Description}}</p>
   </div>
   <div class="col-lg-6">
