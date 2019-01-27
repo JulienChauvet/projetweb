@@ -75,7 +75,7 @@
            <div class="col-lg-8 col-md-8 col-sm-8">
             <p class="card-text mb-auto">{{$event->Description}}</p>
             <br/>
-            <a href="../informations_évènement_à_venir:{{$event->id}}">Lire plus >></a>
+            <a href="/évènements_futurs/évènement:{{$event->id}}">Lire plus >></a>
             <br>
             <br>
             <br>
@@ -103,7 +103,7 @@
           <div class="col-lg-8 col-md-8 col-sm-8">
             <p class="card-text mb-auto">{{$event->Description}}</p>
             <br/>
-            <a href="../informations_évènement_à_venir:{{$event->id}}">Lire plus >></a>
+            <a href="/évènements_futurs/évènement:{{$event->id}}">Lire plus >></a>
             <br>
             <br>
             <br>

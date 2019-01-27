@@ -6,6 +6,16 @@
 @endsection
 
 @section('content')
+
+
+@extends('layout')
+
+@section('link')
+<link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ asset('../css/article.css') }}"/>
+@endsection
+
+@section('content')
 <div class="row">
   <div class="col-lg-3 col-md-3 col-sm-3">
   </div>
@@ -60,6 +70,7 @@
       <div class="control">
         <select type="text" placeholder="Entrez une Catégorie" class="valeur" name="Catégorie" value="{{ old('Catégorie') }}" required>
           @foreach($categories as $category)
+          <option>enfant
           <option>{{$category->Name}}         
             @endforeach
           </select>
@@ -88,4 +99,15 @@
 </form>
 </div>
 </div>
+@endsection
+
+
+
+
+
+
+
+
+
+
 @endsection

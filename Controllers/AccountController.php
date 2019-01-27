@@ -26,7 +26,7 @@ class AccountController extends Controller
 	     	$ordered_articles = $ordered_articles->get_ArticlesIdByOrderId($order);
 
 	     	$articles = new \App\Shop;
-	     	$articles = $articles->get_ArticlesByOrderId($ordered_articles);	
+	     	$articles = $articles->get_ArticlesByOrdersId($ordered_articles);	
 
 	     	foreach ($articles as $article) {
 	     		foreach ($ordered_articles as $ordered_article) {

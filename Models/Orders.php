@@ -25,4 +25,9 @@ class Orders extends Model
 	    }
         return $ordersInCart;
     }
+
+    public function get_MostSoldArticlesId($returned) {
+        $ordered_articles = Orders::join('ordered', 'id_Orders', '=', 'orders.id')->where('orders.status', 2)->orderBy('quantity', 'asc')->getQuery()->take($returned)->get();       
+        return $ordered_articles;
+    }
 }

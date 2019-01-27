@@ -27,15 +27,15 @@ Route::post('/connexion','LoginController@treatment');
 
 // EVENT FUTURS CONTROLLER
 Route::get('/évènements_futurs','EventsFutursController@page');
-Route::get('/informations_évènement_à_venir:{id}','EventsFutursController@page_infos');
+Route::get('/évènements_futurs/évènement:{id}','EventsFutursController@page_infos');
 
 // EVENT PASTS CONTROLLER
 Route::get('/évènements_passés','EventsPastsController@page');
-Route::get('/informations_évènement_passé:{id}','EventsPastsController@page_infos');
+Route::get('/évènements_passés/évènement:{id}','EventsPastsController@page_infos');
 
 // SHOP CONTROLLER
 Route::get('/boutique','ShopController@page');
-Route::get('/categorie:{id}','ShopController@pageFilteredByCategory');
+Route::get('/boutique/categorie:{id}','ShopController@pageFilteredByCategory');
 
 // NEW CATEGORY CONTROLLER
 Route::get('/nouvelle_catégorie','NewCategoryController@page');

@@ -25,14 +25,13 @@ class Shop extends Model
     	return $articles;
     }
 
-    public function get_ArticlesByOrderId($ordered_articles) {
+    public function get_ArticlesByOrdersId($ordered_articles) {
         $articles = Array();
         foreach ($ordered_articles as $ordered_article) {
             array_push($articles, Shop::where('id', $ordered_article->id)->first()); 
         }
         return $articles;
     }
-
 
 }
 

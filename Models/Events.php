@@ -34,5 +34,13 @@ class Events extends Model
         return $events;
     }
 
+    public function get_MostVotedEvents($returned) {
+        $votedEvents = Events::join('vote', 'id_Events', '=', 'events.id')->orderBy('id_Events', 'asc')->getQuery()->count();       
+        return $votedEvents;
+    }
 
+    public function get_EventsForCaroussel() { // < = Pasts events   |   > = Futurs events
+        $events = Events::where('DateEvent','>',Carbon::now()->toDateTimeString())->where('Suggest', 0)->orderBy('id', 'asc')->take(3)->get();
+        return $events;
+    }
 }

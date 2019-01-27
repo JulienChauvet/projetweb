@@ -6,8 +6,9 @@
 <div class="row">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/boutique">Toutes les catégories</a>
     @foreach($categories as $categorie)
-    <a href="/categorie:{{$categorie->id}}">{{$categorie->Name}}</a>
+    <a href="/boutique/categorie:{{$categorie->id}}">{{$categorie->Name}}</a>
     @endforeach
   </div>
   <span id="openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Boutique</span>
