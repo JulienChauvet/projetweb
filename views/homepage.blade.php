@@ -21,14 +21,9 @@
       </div>
       <div class="col-lg-9 col-md-9 col-sm-9">
           <div class="titrebloc">
-            <h3>LE TOP EVENEMENTS DU MOIS</h3>
+            <h3>LE TOP EVENEMENTS DU MOIS : titre</h3>
         </div>
-        <div class="rela">
         <a href="/évènements_futurs"><img src="../Image/boutique.png" name="image du top évènements" class="img"></a>
-        <div class="txtImg">
-           <center><b>DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT </b></center>
-        </div>
-      </div>
       </div>
     </div>
     <div class="row space">
