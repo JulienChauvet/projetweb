@@ -1,8 +1,23 @@
 @extends('layout')
 
-@section('content')
+@section('link')
+<link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ asset('../css/shop.css') }}"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+@endsection
+
+@section('content')
+<div class="row">
+ 
+  <div class="col-lg-10 col-md-10 col-sm-10">
+  </div>
+  <div class="col-lg-2 col-md-2 col-sm-2">
+    <div class="topnav">>
+  <input type="text" class="search" id="myInput" placeholder="Search.." >
+</div>
+</div> 
+</div>
+
 <div class="row">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -15,6 +30,7 @@
 </div>
 <div><a href="/nouvel_article">Ajouter un article</a></div>
 @foreach($articles as $article)
+<div class="backgroun">
 <div class="row">
   <div class="col-lg-6">
     <hr size="10">
@@ -45,9 +61,11 @@
     </div>
   </div>
 </div>
+</p>
 @endforeach
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/shop.js"></script>
 @endsection
