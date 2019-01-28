@@ -449,27 +449,3 @@
   margin-right: 30px;
 }
 
-.img
-{
-  width: 100%;
-  max-width: 1340px;
-  max-height: 500px;
-  position: absolute;
-}
-
-.txtImg {
-  position: absolute;
-  width: 100%;
-  max-width: 540px;
-  max-height: 150px;
-  color: white;
-  margin-left: 400px;
-  margin-top: 350px;
-}
-
-.rela 
-{
-  position: relative;
-  height: 580px;
-}
-
