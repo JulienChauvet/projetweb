@@ -40,23 +40,30 @@
 						<li class="active gauche"><a href="/boutique">Boutique</a></li>
 					</ul>
 
+					<div class="droite">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/deconnexion" class="extendnav"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/compte" class="extendnav"><span class="glyphicon glyphicon-user"></span> Mon compte</a></li>
+					</ul>
+					</div>
+					@else
+					<div class="fulldroite">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/inscription" class="extendnav"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/connexion" class="extendnav"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+					</ul>
+				</div>
+
+					@endif
+
 				</ul>
 			</nav>
 
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/deconnexion" class="extendnav"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/compte" class="extendnav"><span class="glyphicon glyphicon-user"></span> Mon compte</a></li>
-			</ul>
-			@else
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/inscription" class="extendnav"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/connexion" class="extendnav"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
-			</ul>
-			@endif
+			
 			<div class="clearfix"></div>
 		</header>
 
