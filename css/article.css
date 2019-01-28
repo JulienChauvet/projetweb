@@ -1,0 +1,52 @@
+.titrePage
+{
+	color:#F0FDB2;
+}
+
+.body
+{
+	color:#F0FDB2;
+}
+
+.valeur
+{
+	width: 280px;
+	color:black;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 5px;
+}
+
+.centre
+{
+	margin-left: 100px;
+	color:black;
+	margin-bottom: 629px;
+}
+
+.upmarg
+{
+	margin-top: 50px;
+}
+
+.btncentre
+{
+	margin-left: 80px;
+	color:black;
+	margin-bottom: 568px;
+}
+
+
+.com{
+width: 100%;
+width: 470px;
+height: 50px;
+border-radius: 5px;
+margin-right: 10px;
+}
+
+.send {
+border-radius: 5px;
+background: #95C1EE;
+border-color: #03BDE4;
+}

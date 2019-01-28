@@ -49,5 +49,12 @@ Route::post('/nouvel_article','NewArticleController@addArticle');
 Route::get('/boîte_à_idée','IdeaController@page');
 Route::POST('/ajout_suggestion','IdeaController@add_idea');
 
+// NEW IDEA CONTROLLER
+Route::get('/ajout_suggestion','NewEventController@page');
+Route::post('/ajout_suggestion','NewEventController@add_idea');
+
 // ACCOUNT CONTROLLER 
 Route::get('/compte','AccountController@page');
+
+Route::view('/mention_légale', 'legalNotice');
+Route::view('/politique', 'politic');

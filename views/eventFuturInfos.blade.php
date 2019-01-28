@@ -25,7 +25,7 @@
     <div class="col-lg-1">
     </div>
     <div class="col-lg-10">
-        <a class="btn btn-success btn-lg btn-block">S'INSCRIRE</a>
+        <a class="btn btn-success btn-lg btn-block" href="/">S'INSCRIRE</a>
     </div>
     <div class="col-lg-1">
     </div>

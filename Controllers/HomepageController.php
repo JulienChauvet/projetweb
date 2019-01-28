@@ -21,10 +21,10 @@ class HomepageController extends Controller
         $mostSoldArticles = $mostSoldArticles->get_ArticlesByOrdersId($ordered);
 
             // IDEE LES PLUS VOTES //
-       /*$mostVotedEvents = new \App\Events;
-        $mostVotedEvents = $mostVotedEvents->get_MostVotedEvents(3);*/
+       /* $mostVotedEvents = new \App\Vote;
+        $mostVotedEvents = $mostVotedEvents->get_MostVotedEvents();
+        var_dump($mostVotedEvents); */
 
-        
 
 		return view('homepage', ['carrousel_events'=>$carrousel_events, 'mostSoldArticles'=>$mostSoldArticles]);
     }

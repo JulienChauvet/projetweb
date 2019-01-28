@@ -70,7 +70,7 @@
 			</div>
 			<div class="col-lg-2 center">
 				<div class="input-group-button">
-					<button id="voted" type="button" class="btn color input-number-increment">Proposer un évènement</button>
+					<a id="voted" type="button" href="/ajout_suggestion" class="btn color input-number-increment">Proposer un évènement</a>
 				</div>
 			</div>
 			<div class="col-lg-5">

@@ -16,27 +16,25 @@
           </ol>
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
+            @foreach ($carrousel_events as $carrousel_event)
+            @if ($loop->iteration <= 1)
             <div class="item active">
-              <img src="../Image/bowling.png" alt="Bowling" style="width:100%;">
+              <img src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="Bowling" style="width:100%;height:480px">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Evènement Football</h5>
-                <p>On se retrouve pour un tournois de football le 15 janvier 2020</p>
+                <h5>{{$carrousel_event->Title}}</h5>
+                <p>{{$carrousel_event->DateEvent}}</p>
               </div>
             </div>
+            @else
             <div class="item">
-              <img src="../Image/billard.png" alt="Billard" style="width:100%;">
+              <img src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="Billard" style="width:100%;height:480px">
               <div class="carousel-caption d-none d-md-block">
-                <h5>Evènement LAN</h5>
-                <p>On se retrouve pour notre évenement ayant la plus grosse renommé. Notre évenement E-sport avec plusieurs tournois organisé</p>
+                <h5>{{$carrousel_event->Title}}</h5>
+                <p>{{$carrousel_event->DateEvent}}</p>
               </div>
             </div>
-            <div class="item">
-              <img src="../Image/karting.png" alt="Karting" style="width:100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Evènement touchage de couille</h5>
-                <p>Un évenement ou il faut pas trop avoir envie de faire quelque chose pour venir</p>
-              </div>
-            </div>
+            @endif
+            @endforeach
           </div>
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">

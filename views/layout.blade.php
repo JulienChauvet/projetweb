@@ -71,8 +71,8 @@
 			<a href="BDE-STRASBOURG.EXIA.CESI@viacesi.fr" style="color:red;"><i class="fa fa-envelope-o gros" aria-hidden="true"></i></a>
 			<br>
 			<br>
-			<a href="#" class="margRight">Politique de confidentialité</a>
-			<a href="#" class="margRight">Mentions légales</a>
+			<a href="/politique" class="margRight">Politique de confidentialité</a>
+			<a href="/mention_légale" class="margRight">Mentions légales</a>
 			<a href="#" class="margRight"charset="">Crédits</a>
 			<a href="#" class="margRight">© BDE 2018</a>
 		</footer>

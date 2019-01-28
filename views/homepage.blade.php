@@ -4,13 +4,12 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
 @endsection
 
-
 @section('content')
 <div class="space">
   <div class="container-fluid ">
     <div class="row space">
-      <div class="col-lg-3">
-        <div class="ptitbloc">
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <div>
           <div class="titrebloc">
             <h3>L'exia Strasbourg</h3>
           </div>
@@ -20,8 +19,8 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-9">
-        <div class="ptitbloc">
+      <div class="col-lg-9 col-md-9 col-sm-9">
+        <div>
           <div class="titrebloc">
             <h3>CAROUSSELLE AVEC LES EVENEMENTS PASSES ET A VENIR</h3>
           </div>
@@ -59,15 +58,15 @@
       </div>
     </div>
     <div class="row space">
-      <div class="col-6 col-lg-6">
-        <div class="ptitbloc">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div>
           <div class="titrebloc">
             <h3>Actualité</h3>
           </div>
           <div class="descriptionbloc2">
             <div class="container-fluid">q
               <div class="row bb">
-                <div class="col-6 col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="card cardfx">
                     <img class="card-img-top taillefx" src="../Image/foot.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -77,7 +76,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="card cardfx">
                     <img class="card-img-top taillefx" src="../Image/sweat.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -87,7 +86,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="card cardfx">
                     <img class="card-img-top taillefx" src="../Image/mugbulle.jpg" alt="Card image cap">
                     <div class="card-body">
@@ -102,8 +101,8 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-lg-3">
-        <div class="ptitbloc">
+      <div class="col-lg-3 col-md-3 col-sm-3">
+        <div>
           <div class="titrebloc">
             <h3>Nos meilleurs ventes</h3>
           </div>
@@ -111,7 +110,7 @@
             <div class="container-fluid">
               @foreach ($mostSoldArticles as $mostSoldArticle)
               <div class="row">
-                <div class="col-6 col-lg-12">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                   <div class="card flex-md-row mb-4 shadow-sm h-md-250">
                     <div class="card-body d-flex flex-column align-items-start">
                       <strong class="d-inline-block mb-2 text-primary"></strong>
@@ -131,7 +130,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-lg-3">
+      <div class="col-lg-3 col-md-3 col-sm-3">
         <div class="ptitbloc">
           <div class="titrebloc">
             <h3>Idées les plus like</h3>
