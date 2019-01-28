@@ -101,14 +101,18 @@ nav ul li a:hover
   {
     display: block;
     width: 100%;
+        background: white;
   }
   nav.active ul
   {
-    display: block;
+    display: inline;
   }
   nav.active ul li a
   {
     margin: 0;
+  }
+  .droite{
+    margin-right: 170px;
   }
 }
 
@@ -120,4 +124,14 @@ nav {
   color: black;
 margin-top: 10px;
 margin-right: 20px;
+}
+
+.droite
+{
+  margin-left: 450px;
+}
+
+.fulldroite
+{
+  margin-left: 800px;
 }

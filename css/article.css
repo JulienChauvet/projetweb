@@ -1,6 +1,7 @@
 .titrePage
 {
 	color:#F0FDB2;
+	width: 100%;
 }
 
 .body
@@ -10,7 +11,8 @@
 
 .valeur
 {
-	width: 280px;
+	width: 100%;
+	max-width: 280px;
 	color:black;
 	margin-left: 20px;
 	margin-right: 20px;
@@ -19,6 +21,7 @@
 
 .centre
 {
+	margin-top: 20px;
 	margin-left: 100px;
 	color:black;
 	margin-bottom: 629px;
