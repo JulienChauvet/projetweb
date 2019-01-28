@@ -20,26 +20,38 @@
         </div>
       </div>
       <div class="col-lg-9 col-md-9 col-sm-9">
+          <div class="titrebloc">
+            <h3>LE TOP EVENEMENTS DU MOIS</h3>
+        </div>
+        <div class="rela">
+        <a href="/évènements_futurs"><img src="../Image/boutique.png" name="image du top évènements" class="img"></a>
+        <div class="txtImg">
+           <center><b>DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT DESCRIPTION TOP EVENT </b></center>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row space">
+      <div class="col-lg-6 col-md-6 col-sm-6">
         <div>
           <div class="titrebloc">
-            <h3>CAROUSSELLE AVEC LES EVENEMENTS PASSES ET A VENIR</h3>
+            <h3>Actualité</h3>
           </div>
           <div class="descriptionbloc">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               </ol>
               <div class="carousel-inner">
                 @foreach ($carrousel_events as $carrousel_event)
                 @if ($loop->iteration <= 1)
                 <div class="carousel-item active ">
-                  <img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;">
+                  <a href="/évènements_futurs"><img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;"></a>
                 </div>
                 @else
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;">
+                  <a href="/évènements_futurs"><img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;"></a>
                 </div>
                 @endif
                 @endforeach
@@ -52,51 +64,6 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row space">
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <div>
-          <div class="titrebloc">
-            <h3>Actualité</h3>
-          </div>
-          <div class="descriptionbloc2">
-            <div class="container-fluid">q
-              <div class="row bb">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <div class="card cardfx">
-                    <img class="card-img-top taillefx" src="../Image/foot.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <div class="card cardfx">
-                    <img class="card-img-top taillefx" src="../Image/sweat.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <div class="card cardfx">
-                    <img class="card-img-top taillefx" src="../Image/mugbulle.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
