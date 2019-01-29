@@ -25,18 +25,24 @@ class NewArticleController extends Controller
     	$path = request('Image')->store('Articles', 'public');
 
         $categories= new \App\Categories;
-        $belongs = new \App\Belong;
     	$shop = new \App\Shop;
+        $categoriesBox = request(['Category']);
 
-    	$shop->Name = request('Article');
-    	$shop->Description = request('Description');
-    	$shop->Price = request('Prix');
-    	$shop->PictureLink = $path;
-    	$shop->save();
+        $shop->Name = request('Article');
+        $shop->Description = request('Description');
+        $shop->Price = request('Prix');
+        $shop->PictureLink = $path;
+        $shop->save();
 
-        $belongs->id=$categories->get_idCategorie(request('Catégorie'));
-        $belongs->id_Articles=$shop->get_LastArticleId();
-        $belongs->save();
+        foreach ($categoriesBox as $categoryArray) {
+            foreach ($categoryArray as $category) {
+                $belongs = new \App\Belong;
+                $belongs->id_Articles=$shop->get_LastArticleId();
+                $belongs->id=$categories->get_idCategorie($category);
+                $belongs->save();
+            }
+           
+        }
 
         flash("Article ajouté !")->success();
     	return back();

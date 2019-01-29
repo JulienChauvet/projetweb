@@ -38,6 +38,7 @@ class RegisterController extends Controller
 	    $userLoc->id = $user->get_id($user->Email);
 	    $userLoc->save();
 
+	    flash('Inscription réussie ! Veuillez vous connecter.')->success();
 	    return redirect('/connexion');
     }
 

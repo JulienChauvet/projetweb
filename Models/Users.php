@@ -43,8 +43,17 @@ class Users extends Model implements Authenticatable {
     }
 
     public function get_UserById($id) {
-        $user = Users::where('id', $id)->first();
+        $user = Users::find($id);
         return $user;
+    }
+
+    public function get_UsersbyOrders($orders) {
+        $users = Array();
+        foreach ($orders as $order) {
+            array_push($users, Users::where('id', $order->id_Users)->first());
+        }
+        
+        return $users;
     }
 
 }

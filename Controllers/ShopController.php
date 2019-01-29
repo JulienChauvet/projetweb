@@ -17,12 +17,13 @@ class ShopController extends Controller
 	public function pageFilteredByCategory() {
     	$articles_id = new \App\Belong;
     	$articles_id = $articles_id->get_ArticleIdByCategoryId(request('id'));
+        $role = auth()->user()->Role;
 
     	$articles = new \App\Shop;
     	$articles = $articles->get_ArticlesById($articles_id);
 
     	$categories = \App\Categories::all();
-    	return view('shop', ['articles' => $articles, 'categories' => $categories]);
+    	return view('shop', ['articles' => $articles, 'categories' => $categories, 'role'=>$role]);
 
 	}
 
@@ -32,7 +33,7 @@ class ShopController extends Controller
         $quantity = request('quantity');
 
         $cart = new \App\Orders;
-        $cart = $cart->get_OrdersByUserId($id_user, 0);
+        $cart = $cart->get_CartByUserId($id_user);
 
         if ($cart){
             $articles_alreadyInCart = new \App\Ordered;
@@ -55,20 +56,38 @@ class ShopController extends Controller
 
                 if ($quantity > 1){ 
                     flash("Articles ajoutés à votre panier !")->success();   
-                } else {
+                } 
+                else {
                     flash("Article ajouté à votre panier !")->success();  
                 }
-            } else{
+            } 
+            else{
                 flash("Article déjà dans votre panier")->warning();
             }
 
-        } else{
+        }
+        else{
+            $newCart = new \App\Orders;
+            $newCart->status = 0;
+            $newCart->id_Users = $id_user;
+            $newCart->save();
+
+            $cart = new \App\Orders;
+            $cart = $cart->get_CartByUserId($id_user);
+
+            var_dump($cart);
+
             $article = new \App\Ordered;
-            $article->quantity = 1;
+            $article->quantity = $quantity;
             $article->id = $id_article;
             $article->id_Orders = $cart->id;
-            $article->save();   
-            flash("Article ajouté à votre panier !")->success();   
+            $article->save(); 
+            if ($quantity > 1){ 
+                flash("Articles ajoutés à votre panier !")->success();   
+            } 
+            else {
+                flash("Article ajouté à votre panier !")->success();  
+            } 
         }
 
         return back();

@@ -2,7 +2,10 @@
 namespace App\Http\Controllers;
 use Request;
 use App\Events;
-
+use App\Suggest;
+use App\Users;
+use App\Mail\Notifications;
+use Mail;
 
 class IdeaController extends Controller
 {
@@ -37,6 +40,12 @@ class IdeaController extends Controller
 						'Suggest' => '0',
 		]);
 		
+		$id_user = Suggest::where('id_Events',request('ID'))->value('id');
+        $user = new \App\Users;
+        $user = $user->get_UserById($id_user);
+        Mail::to($user)->send(New Notifications($user));
+
+
  		flash("Évènement validé")->success();
  		return redirect("/boîte_à_idée");
 	}

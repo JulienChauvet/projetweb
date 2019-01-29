@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AccountController extends Controller
 {
-     public function page() {
+    public function page() {
      	$id_user = auth()->id(); // Récupère l'id du user connecté
 
      	// Récupère l'utilisateur //
@@ -16,7 +16,7 @@ class AccountController extends Controller
      		//* PANIER *//
      	// Récupère ses différentes commandes //
      	$cart = new \App\Orders;
-     	$cart = $cart->get_OrdersByUserId($id_user, 0);
+     	$cart = $cart->get_CartByUserId($id_user);
 
      	$total_price = 0;
      	// Récupère les articles, la quantité de chacun et le prix total du panier //
@@ -34,10 +34,9 @@ class AccountController extends Controller
 	     			}
 	     		}
 	     	}
-
      	} else{
-     		$ordered_articles = NULL;
-	     	$articles = NULL;
+     		$ordered_articles = Array(); // vide
+	     	$articles = Array();
      	}
 
      		//* INSCRIPTIONS *//
@@ -50,12 +49,12 @@ class AccountController extends Controller
     	return view('account', ['user'=>$user, 'articles'=>$articles, 'ordered_articles'=>$ordered_articles, 'total_price'=>$total_price, 'events'=>$events]);
 	}
 
-     public function removeFromCart() {
+    public function removeFromCart() {
         $id_user = auth()->id();
         $id_article = request('id');
 
         $cart = new \App\Orders;
-        $cart = $cart->get_OrdersByUserId($id_user, 0);
+        $cart = $cart->get_CartByUserId($id_user);
 
         $article = new \App\Ordered;
         $article = $article->remove_SingleArticleByOrderId($cart->id, $id_article);
@@ -63,5 +62,17 @@ class AccountController extends Controller
         flash("Article supprimé")->success();
         return back();
      }
+
+    public function placeAnOrder() {
+        $id_user = auth()->id();
+
+        $order = new \App\Orders;
+        $order = $order->get_CartByUserId($id_user);
+        $order->update(['status'=>1]);
+
+        flash("Commande passée !")->success();
+        return back();
+
+    }
 
 }
