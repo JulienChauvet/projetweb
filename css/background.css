@@ -1,0 +1,36 @@
+.bak {
+	color:white;
+	background-color:black;
+	background-image: url(../Image/nuit.png);
+}
+
+
+
+.backgroun {
+	color:black;
+	background-color:white;
+	background-image: url(../Image/evenement.png);
+	width:100%;
+}
+
+.backGL {
+	color:white;
+}
+
+footer {
+	color:white;
+	background-image: url(../Image/evenement.png);
+	width:100%;
+}
+}
+
+header h1 {
+	color:red;
+}
+
+body {
+	margin:0 auto;
+	height:100%;
+	width:100%;
+	overflow-x: hidden;
+}

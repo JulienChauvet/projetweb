@@ -1,0 +1,262 @@
+.sidenav {
+
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#openbtn {
+    margin-left: 30px;
+  color: #818181;
+}
+
+.noBorder {
+  border: 0px;
+}
+
+
+.titre
+{
+  font-size: 60px;
+  margin-left: 15px;
+  color: white;
+  display:inline;
+}
+
+.bigger
+{
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.subtitre
+{
+  font-size: 40px;
+  margin-left: 15px;
+  color: #818181;
+}
+
+hr
+{
+  color:#818181;
+}
+
+#tooLarge
+{
+  width:150px;
+}
+
+p
+{
+  color:white;
+}
+
+.blanc
+{
+  color:white;
+}
+
+#grande
+{
+width: 100%;
+
+}
+
+.attention
+{
+  color:#FE7354;
+}
+
+.orange
+{
+  color:white;
+  background:#F4A648;
+  border-style: black;
+}
+
+
+.input-number-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-number-group input[type=number]::-webkit-inner-spin-button,
+.input-number-group input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.input-number-group .input-group-button {
+  line-height: calc(80px/2 - 5px);
+}
+
+.input-number-group .input-number {
+  width: 80px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+  display: block;
+  margin: 0;
+}
+
+.input-number-group .input-number,
+.input-number-group .input-number-decrement,
+.input-number-group .input-number-increment {
+  border: 1px solid #cacaca;
+  height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 0;
+}
+
+.input-number-group .input-number-decrement,
+.input-number-group .input-number-increment {
+  display: inline-block;
+  width: 40px;
+  background: #e6e6e6;
+  color: #0a0a0a;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.input-number-group .input-number-decrement {
+  margin-right: 0.3rem;
+}
+
+.input-number-group .input-number-increment {
+  margin-left: 0.3rem;
+}
+
+
+.test
+{
+  color:black;
+}
+
+.search 
+{
+  margin-top: 15px;
+margin-right: 15px;
+width: 200px;
+height: 50px;
+border-radius: 5px;
+border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+    box-sizing: border-box;
+
+}
+
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+
+input[type=text] {
+  background-color: #f1f1f1;
+ 
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.rouge {
+  background: red;
+  color: white;
+  content: #f2ed;
+}
+
+.green
+{
+  color: black;
+  background: #96FED8;
+  border-color: green;
+    margin-top: 20px;
+    float: right;
+    width: 100%;
+}
+
+.responsiv
+{
+  width: 100%;
+}
