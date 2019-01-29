@@ -8,14 +8,25 @@
 
 @section('content')
 <div class="row">
- 
-  <div class="col-lg-10 col-md-10 col-sm-10">
+  <div class="col-lg-8 col-md-8 col-sm-8">
   </div>
+  @if($role == 'BDE')
+  <div class="col-lg-1 col-md-1 col-sm-1">
+    <div class="push">
+      <a href="/boutique/commandes"><button type="button" class="btn green"><b>Commandes</b></button></a>
+    </div>
+  </div>
+  <div class="col-lg-1 col-md-1 col-sm-1">
+    <div class="push">
+      <a href="/boutique/nouvel_article"><button type="button" class="btn green"><b>Ajouter un article</b></button></a>
+    </div>
+  </div>
+  @endif
   <div class="col-lg-2 col-md-2 col-sm-2">
-    <div class="topnav">>
-  <input type="text" class="search" id="myInput" placeholder="Search.." >
-</div>
-</div> 
+    <div class="topnav">
+      <input type="text" class="search" id="myInput" placeholder="Search.." >
+    </div>
+  </div> 
 </div>
 
 <div class="row">
@@ -28,37 +39,40 @@
   </div>
   <span id="openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Boutique</span>
 </div>
-<div><a href="/nouvel_article">Ajouter un article</a></div>
 @foreach($articles as $article)
 <div class="backgroun">
-<div class="row">
-  <div class="col-lg-6">
-    <hr size="10">
-    <h1 class="titre">{{$article->Name}}</h1><br>
-    <h1 class="subtitre">{{$article->Price}} €</h1>
-    <p class="bigger">{{$article->Description}}</p>
-  </div>
-  <div class="col-lg-6">
+  <div class="row">
     <div class="col-lg-6">
+      <hr size="10">
+      <h1 class="titre">{{$article->Name}}</h1><br>
+      <h1 class="subtitre">{{$article->Price}} €</h1>
+      <p class="bigger">{{$article->Description}}</p>
+    </div>
+    <div class="col-lg-6">
+      <div class="col-lg-6">
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <button type="button" class="btn rouge"><i class="fas fa-trash-alt"></i></button>
-      <br>
-      <br>
-      <button type="button" class="btn orange"><b>ADD TO CART >><b></button>
-        <p>Qté : <p>
-         <input class="input-number test" type="number" value="1" min="0" max="1000">
-       </div>
-       <div class="col-lg-6">
-        <img src="{{ url('storage/' . $article->PictureLink) }}" class="image-link" alt="image" id="grande">
-      </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        @if($role == 'BDE')
+        <a type="button" class="btn rouge"><i class="fas fa-trash-alt"></i></a>
+        @endif
+        <br>
+        <br>
+        <form action="/boutique/ajout_au_panier:{{$article->id}}" method="GET">
+         <button type="submit" class="btn orange"><b>ADD TO CART >></b></button>
+         <p>Qté : </p>
+         <input name="quantity" class="input-number test" type="number" value="1" min="1" max="1000">
+       </form>
+     </div>
+     <div class="col-lg-6">
+      <img src="{{ url('storage/' . $article->PictureLink) }}" class="image-link" alt="image" id="grande">
     </div>
   </div>
+</div>
 </div>
 </p>
 @endforeach

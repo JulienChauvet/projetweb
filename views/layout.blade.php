@@ -26,10 +26,10 @@
 					@if(auth()->check())
 					<ul class= "nav navbar-nav">
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Évènements</a>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="">Évènements</a>
 							<ul class="dropdown-menu">
-								<li><a href="évènements_futurs">Évènements futurs</a></li>
-								<li><a href="évènements_passés">Évènements passés</a></li>
+								<li><a href="/évènements_futurs">Évènements futurs</a></li>
+								<li><a href="/évènements_passés">Évènements passés</a></li>
 							</ul>
 						</li>
 					</ul>

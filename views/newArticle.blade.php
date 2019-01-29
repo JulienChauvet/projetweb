@@ -5,15 +5,6 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('../css/article.css') }}"/>
 @endsection
 
-@section('content')
-
-
-@extends('layout')
-
-@section('link')
-<link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
-<link rel="stylesheet" type="text/css" href="{{ asset('../css/article.css') }}"/>
-@endsection
 
 @section('content')
 <div class="row">
@@ -24,12 +15,9 @@
       <h2 class="titrePage">N'attendez plus :</h2></center>
     </div>
   </div>
-  <div>
-    <a href="/nouvelle_catégorie">Ajouter une catégorie</a>
-  </div>
   <div class="body">
     <div class="row">
-      <form class="section upmarg" action="/nouvel_article" method="POST" enctype="multipart/form-data">
+      <form class="section upmarg" action="/boutique/nouvel_article" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="field col-lg-2 col-md-2 col-sm-2">
           <br>
@@ -68,12 +56,9 @@
       <br>
       <center><label for="Catégorie">Catégorie : </label></center>
       <div class="control">
-        <select type="text" placeholder="Entrez une Catégorie" class="valeur" name="Catégorie" value="{{ old('Catégorie') }}" required>
           @foreach($categories as $category)
-          <option>enfant
-          <option>{{$category->Name}}         
+             <span><input type="checkbox" id="MonthEvent" name="évènement du mois" value="évènement du mois"> {{$category->Name}}</span>        
             @endforeach
-          </select>
         </div>
         @if($errors->has('Catégorie'))
         <p class="alert alert-danger">{{ $errors->first('Catégorie') }}</p>
@@ -93,12 +78,16 @@
   </div>
   <div class="field col-lg-2 col-md-2 col-sm-2">
     <div class="control">
-      <button class="button is-link centre" type="submit">Ajouter Article</button>
+      <button class="button is-link bouton" type="submit">Ajouter</button>
     </div>
   </div>
 </form>
 </div>
 </div>
+
+<div class="row">
+<a href="/boutique/nouvelle_catégorie"><button class="button is-link top" type="submit">Ajouter une catégorie</button></a>
+  </div>
 @endsection
 
 
@@ -108,6 +97,3 @@
 
 
 
-
-
-@endsection

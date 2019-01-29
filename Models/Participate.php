@@ -15,4 +15,9 @@ class Participate extends Model
 	    $participations = Participate::where('id_Users', $id_user)->get();
         return $participations;
     }
+
+    public function get_ParticipationByEventAndUserId($id_user, $id_event) {
+	    $participation = Participate::where('id_Users', $id_user)->where('id', $id_event)->first();
+        return $participation;
+    }
 }

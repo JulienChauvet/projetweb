@@ -7,7 +7,7 @@ class NewCategoryController extends Controller
 {
 
 	public function page(){
-		return view('NewCategorie');
+		return view('NewCategory');
 	}
 
     public function addCategory(){

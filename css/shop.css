@@ -245,3 +245,18 @@ input[type=submit] {
   color: white;
   content: #f2ed;
 }
+
+.green
+{
+  color: black;
+  background: #96FED8;
+  border-color: green;
+    margin-top: 20px;
+    float: right;
+    width: 100%;
+}
+
+.responsiv
+{
+  width: 100%;
+}

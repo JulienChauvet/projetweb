@@ -25,7 +25,6 @@ class NewEventController extends Controller
 	    $suggest = new \App\Suggest;
 	    
 	    $path = request('Image')->store('Events','public');
-	    	// Rempli la bdd nationale avec les infos de l'utilisateur //
 	  
 	    $event->Title = request('Title');
 	    $event->Description = request('Description');
@@ -36,13 +35,11 @@ class NewEventController extends Controller
 	    $event->save();
 
 	    $suggest->id = auth()->id();
-	    $suggest->id_Events = $event->get_lastidevent();
+	    $suggest->id_Events = $event->get_LastIdEvent();
 	    $suggest->save();
 
-	    	// Rempli la bdd locale avec l'id de l'utilisateur //
-	   
-
-	    return back();
+	    flash("Évènement suggéré !")->success();
+	    return redirect("/boîte_à_idée");
     }
 
 }

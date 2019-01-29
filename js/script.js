@@ -1,14 +1,3 @@
-
-$('.input-number-increment').click(function() {
-	alert("Merci ! Votre vote à bien été pris en compte !");
-  var $input = $(this).parents('.input-number-group').find('.input-number');
-  var val = parseInt($input.val(), 10);
-  $input.val(val + 1);
-});
-
-
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

@@ -42,11 +42,11 @@
                 @foreach ($carrousel_events as $carrousel_event)
                 @if ($loop->iteration <= 1)
                 <div class="carousel-item active ">
-                  <a href="/évènements_futurs"><img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;"></a>
+                  <a href="/évènements_futurs/évènement:{{$carrousel_event->id}}"><img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;"></a>
                 </div>
                 @else
                 <div class="carousel-item">
-                  <a href="/évènements_futurs"><img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;"></a>
+                  <a href="/évènements_futurs/évènement:{{$carrousel_event->id}}"><img class="d-block w-100" src="{{ url('storage/' . $carrousel_event->PictureLink) }}" alt="slide" style="height:480px;"></a>
                 </div>
                 @endif
                 @endforeach

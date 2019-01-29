@@ -15,15 +15,14 @@ class AccountController extends Controller
 
      		//* PANIER *//
      	// Récupère ses différentes commandes //
-     	$order = new \App\Orders;
-     	$order = $order->get_OrdersByUserId($id_user, 0);
+     	$cart = new \App\Orders;
+     	$cart = $cart->get_OrdersByUserId($id_user, 0);
 
      	$total_price = 0;
-
      	// Récupère les articles, la quantité de chacun et le prix total du panier //
-     	if ($order) {
+     	if ($cart) {
      		$ordered_articles = new \App\Ordered; // Cette variable contient également la quantité
-	     	$ordered_articles = $ordered_articles->get_ArticlesIdByOrderId($order);
+	     	$ordered_articles = $ordered_articles->get_ArticlesIdByOrderId($cart->id);
 
 	     	$articles = new \App\Shop;
 	     	$articles = $articles->get_ArticlesByOrdersId($ordered_articles);	
@@ -50,4 +49,19 @@ class AccountController extends Controller
 
     	return view('account', ['user'=>$user, 'articles'=>$articles, 'ordered_articles'=>$ordered_articles, 'total_price'=>$total_price, 'events'=>$events]);
 	}
+
+     public function removeFromCart() {
+        $id_user = auth()->id();
+        $id_article = request('id');
+
+        $cart = new \App\Orders;
+        $cart = $cart->get_OrdersByUserId($id_user, 0);
+
+        $article = new \App\Ordered;
+        $article = $article->remove_SingleArticleByOrderId($cart->id, $id_article);
+
+        flash("Article supprimé")->success();
+        return back();
+     }
+
 }

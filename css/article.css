@@ -53,3 +53,26 @@ border-radius: 5px;
 background: #95C1EE;
 border-color: #03BDE4;
 }
+
+.MonthEvent
+{
+	text-align: right;
+	margin-top: 20px;
+}
+
+.top
+{
+	margin-top: 90px;
+	color: black;
+	background: yellow;
+	border-color: black;
+	margin-left: 50px;
+	margin-bottom: 438px;
+}
+
+.bouton
+{
+	color: black;
+	margin-left: 100px;
+	margin-top: 20px;
+}

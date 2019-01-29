@@ -10,6 +10,7 @@ class Events extends Model
     protected $connection = 'mysql2';
 	protected $table = "events"; // la table à utiliser
 	public $timestamps = false; // ignore la date de création/modification
+    protected $fillable = ['Suggest','Title','Description','DateEvent','PictureLink','Recurrence'];
 
 	public function get_EventsByDate($signe) { // < = Pasts events   |   > = Futurs events
         $events = Events::where('DateEvent',$signe,Carbon::now()->toDateTimeString())->where('Suggest', 0)->get();
@@ -37,5 +38,10 @@ class Events extends Model
     public function get_EventsForCaroussel() { // < = Pasts events   |   > = Futurs events
         $events = Events::where('DateEvent','>',Carbon::now()->toDateTimeString())->where('Suggest', 0)->orderBy('id', 'asc')->take(3)->get();
         return $events;
+    }
+
+    public function get_LastIdEvent(){
+        $idevent=Events::orderBy('id', 'DESC')->first()->id;
+        return $idevent;
     }
 }
