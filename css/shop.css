@@ -89,9 +89,14 @@ p
   color:white;
 }
 
-#grande
+.grande
 {
+max-width: 600px;
+max-height: 430px;
 width: 100%;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-right: 50px;
 
 }
 
@@ -246,7 +251,7 @@ input[type=submit] {
   content: #f2ed;
 }
 
-.green
+.btn-info
 {
   color: black;
   background: #96FED8;

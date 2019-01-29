@@ -451,7 +451,7 @@
 
 .screen
 {
-  margin-bottom: 518px;
+  margin-bottom: 468px;
 }
 
 .tomato
@@ -465,5 +465,32 @@
 .csv
 {
   margin-top: 19px;
+  width: 100%;
+}
+
+.blancChaud
+{
+  color: #F0FDB2;
+}
+
+.radius {
+  border-radius: 5px;
+  color: black;
+}
+
+.noir
+{
+  background: black;
+  margin-bottom: 15px;
+}
+
+.hauteur
+{
+  height: 300px;
+  width: 100%;
+}
+
+.img
+{
   width: 100%;
 }

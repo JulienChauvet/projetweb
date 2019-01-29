@@ -42,22 +42,29 @@
 
 .com{
 width: 100%;
-width: 470px;
+max-width: 470px;
 height: 50px;
 border-radius: 5px;
 margin-right: 10px;
+display: inline;
 }
 
 .send {
+	float: left;
+	display: block;
+	width: 100%;
+	max-width: 100px;
 border-radius: 5px;
 background: #95C1EE;
 border-color: #03BDE4;
+clear: both;
 }
 
-.MonthEvent
+#MonthEvent
 {
 	text-align: right;
-	margin-top: 20px;
+	margin-top: 30px;
+	margin-left: 15px;
 }
 
 .top
@@ -75,4 +82,27 @@ border-color: #03BDE4;
 	color: black;
 	margin-left: 100px;
 	margin-top: 20px;
+}
+
+.add
+{
+	background: orange;
+	border-radius: 5px;
+	border-color: tomato;
+	float: right;
+	margin-top: 250px;
+}
+
+.xRight
+{
+	float: right;
+	margin-top: 250px;
+	color: white;
+}
+
+.nop
+{
+	background: none;
+	border: none;
+	color: gray;
 }
