@@ -21,10 +21,9 @@
 
 
 <div class="body">
-    <div class="row">
       <form action="/boîte_à_idée/ajout_suggestion" method="POST" enctype="multipart/form-data">
   {{ csrf_field() }}
-
+    <div class="row">
   <div class="col-lg-2 col-md-2 col-sm-2">
   <label for="Title"><b> Titre de l'évènement</b></label>
   <input type="text" placeholder="Entrez le titre de l'évènement" class="valeur" name="Title" value="{{ old('Title') }}" required>
@@ -70,7 +69,12 @@
       <p class="alert alert-danger">{{ $errors->first('Image') }}</p>
       @endif
   </div>
-  
+</div>
+<div class="row">
+  <div class="col-lg-2 col-md-2 col-sm-2 MonthEvent">
+    <span><input type="checkbox" id="MonthEvent" name="évènement du mois" value="évènement du mois"> évènement du mois</span>
+  </div>
   <p><input type="submit" class="centre" value="Suggérer l'évènement"></p>
+</div>
 </form>
 @endsection
