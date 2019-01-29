@@ -1,3 +1,4 @@
+<!-- child of the page : layout.blade.php -->
 @extends('layout')
 
 @section('link')
@@ -5,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
 @endsection
 
+<!-- body of the page : layout.blade.php -->
 @section('content')
 <div class="row">
 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -13,6 +15,7 @@
   <form action="/connexion" method="POST">
     {{ csrf_field() }}
     <div class="container">
+      <!-- check the data from the database to verif if they had an account -->
       <h1 class="blanc">Connectez-vous à votre espace personnel</h1>
       <p class="blanc"><a style="color:red">*</a> champs obligatoires</p>
       <hr>
@@ -40,6 +43,7 @@
       <u><a href="#" style="color:white">Mot de passe oublié ?</a></u>
       <br>
       <br>
+      <!-- let poeple to go to the register page if they havn't account -->
       <p class="blanc">Vous n'avez pas encore d'espace personnel pour vous inscrire ?</p>
       <u><a href="/inscription" style="color:white">Créez votre espace maintenant !</a></u>
       <div class="col-sm-12 col-md-6 col-lg-1">

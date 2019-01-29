@@ -1,5 +1,7 @@
+<!-- child of the page : layout.blade.php -->
 @extends('layout')
 
+<!-- legal notice of the site -->
 @section('content')
 
 <div class="container-fluid">

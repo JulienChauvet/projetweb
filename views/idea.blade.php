@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('link')
+<link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
 @endsection
 
 @section('content')
@@ -11,7 +12,7 @@
 			</div>
 			<div class="col-lg-10 col-md-10 col-sm-12">
 				<div class="image-container">
-					<div class="text">BOITE A IDEE</div>
+					<center><h1 class="blancChaud">BOITE A IDEE</h1></center>
 				</div> 
 			</div>
 			<div class="col-lg-1 col-md-1 col-sm-0">
@@ -29,20 +30,24 @@
 							<img src="{{ url('storage/' . $event->PictureLink) }}" alt="Avatar" class="tailleimg">
 						</div>
 						<div class="flip-card-back">
+
 							<h1>{{$event->Title}}</h1>
+							<label for="Date"><b>Date : ici date</b></label>
 							<p>{{$event->Description}}</p>
 							<div class="input-group-button">
-								<button id="voted" type="button" class="btn color input-number-increment">Vote</button>
+								<button id="voted" type="button" class="btn color input-number-increment dark">Vote</button>
 							</div>
-							<input type="text" class="input-number" value="0" min="0" max="1000" disabled>
+							<input type="text" class="input-number radius" value="0" min="0" max="1000" disabled>
 							@if($role == 'BDE')
 							<div class="input-group-button">
-								<a href="/boîte_à_idée/validation:{{$event->id}}" id="validation" type="button" class="btn color input-number-increment">Validation de l'idée</a>
+								<a href="/boîte_à_idée/validation:{{$event->id}}" id="validation" type="button" class="btn color input-number-increment dark">Validation de l'idée</a>
 							</div>
 							@endif
 						</div>
 					</div>
-				</div> 
+				</div>
+				<u><input type="submit" name="com_1" value="supprimer" class="nop">
+      <input type="submit" name="com_2" value="signaler" class="nop"></u> 
 			</div>
 			@endif
 			@if ($loop->iteration % 2 == 0)
@@ -54,19 +59,22 @@
 						</div>
 						<div class="flip-card-back">
 							<h1>{{$event->Title}}</h1>
+							<label for="Date"><b>Date : ici date</b></label>
 							<p>{{$event->Description}}</p>
 							<div class="input-group-button">
-								<button id="voted" type="button" class="btn color input-number-increment">Vote</button>
+								<button id="voted" type="button" class="btn color input-number-increment dark">Vote</button>
 							</div>
-							<input type="text" class="input-number" value="0" min="0" max="1000" disabled>
+							<input type="text" class="input-number radius" value="0" min="0" max="1000" disabled>
 							@if($role == 'BDE')
 							<div class="input-group-button">
-								<a href="/boîte_à_idée/validation:{{$event->id}}" id="validation" type="button" class="btn color input-number-increment">Validation de l'idée</a>
+								<a href="/boîte_à_idée/validation:{{$event->id}}" id="validation" type="button" class="btn color input-number-increment dark">Validation de l'idée</a>
 							</div>
 							@endif
 						</div>
 					</div>
-				</div> 
+				</div>
+				<u><input type="submit" name="com_1" value="supprimer" class="nop">
+      <input type="submit" name="com_2" value="signaler" class="nop"></u> 
 			</div>
 			<div class="col-lg-2 col-md-2 col-sm-0">
 			</div>
@@ -82,7 +90,7 @@
 			<div class="col-lg-2 center">
 				@if($role == 'BDE')
 				<div class="input-group-button">
-					<a id="voted" type="button" href="/boîte_à_idée/ajout_suggestion" class="btn color input-number-increment">Proposer un évènement</a>
+					<a id="voted" type="button" href="/boîte_à_idée/ajout_suggestion" class="btn color input-number-increment blanc noir">Proposer un évènement</a>
 				</div>
 				@endif
 			</div>

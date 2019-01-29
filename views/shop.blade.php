@@ -13,12 +13,12 @@
   @if($role == 'BDE')
   <div class="col-lg-1 col-md-1 col-sm-1">
     <div class="push">
-      <a href="/boutique/commandes"><button type="button" class="btn green"><b>Commandes</b></button></a>
+      <a href="/boutique/commandes"><button type="button" class="btn btn-info"><b>Commandes</b></button></a>
     </div>
   </div>
   <div class="col-lg-1 col-md-1 col-sm-1">
     <div class="push">
-      <a href="/boutique/nouvel_article"><button type="button" class="btn green"><b>Ajouter un article</b></button></a>
+      <a href="/boutique/nouvel_article"><button type="button" class="btn btn-info"><b>Ajouter un article</b></button></a>
     </div>
   </div>
   @endif
@@ -49,7 +49,7 @@
       <p class="bigger">{{$article->Description}}</p>
     </div>
     <div class="col-lg-6">
-      <div class="col-lg-6">
+      <div class="col-lg-4">
 
         <br>
         <br>
@@ -68,9 +68,9 @@
          <input name="quantity" class="input-number test" type="number" value="1" min="1" max="1000">
        </form>
      </div>
-     <div class="col-lg-6">
-      <img src="{{ url('storage/' . $article->PictureLink) }}" class="image-link" alt="image" id="grande">
-    </div>
+      <div class="col-lg-8"> 
+        <img src="{{ url('storage/' . $article->PictureLink) }}" class="image-link grande center" alt="image">
+      </div>
   </div>
 </div>
 </div>

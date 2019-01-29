@@ -1,9 +1,11 @@
+<!-- child of the page : layout.blade.php -->
 @extends('layout')
 
 @section('link')
 <link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
 @endsection
 
+<!-- body of the layout -->
 @section('content')
 <div class="row">
   <div class="col-lg-1 col-md-1 col-sm-1">
@@ -19,6 +21,7 @@
   <div class="col-lg-1 col-md-1 col-sm-1">
   </div>
 </div>
+<!-- for each events -->
 @foreach($events as $event)
 <div class="container-fluid margTop">
   <div class="row">
@@ -29,6 +32,7 @@
         <div class="card">
           <div class="card-header" id="headingOne">
             <h5 class="mb-0">
+              <!-- make a button with the title of the event -->
               <button class="btn btn-link" type="button" data-toggle="collapse" style="width:1500px; float:center;" data-target="#collapse{{$event->id}}" aria-expanded="true" aria-controls="collapse{{$event->id}}">
                 {{$event->Title}}
               </button>
@@ -38,6 +42,7 @@
             <div class="card-body">
               <div class="container-fluid">
                 <div class="row">
+                  <!-- using data from the database -->
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <img class="taille" src="{{ url('storage/' . $event->PictureLink) }}" alt="event">
                   </div>

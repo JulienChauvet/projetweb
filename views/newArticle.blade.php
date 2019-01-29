@@ -57,7 +57,7 @@
       <center><label for="Catégorie">Catégorie : </label></center>
       <div class="control">
           @foreach($categories as $category)
-             <span><input type="checkbox" id="MonthEvent" name="évènement du mois" value="évènement du mois"> {{$category->Name}}</span>        
+             <span><input type="checkbox" name="Category[]" value="{{$category->Name}}"/> {{$category->Name}}</span>
             @endforeach
         </div>
         @if($errors->has('Catégorie'))

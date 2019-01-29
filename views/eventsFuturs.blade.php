@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('link')
+<link rel="stylesheet" type="text/css" href="{{ asset('../css/style.css') }}"/>
+@endsection
+
 @section('content')
 <div class='backgroun'>
   <div class="container-fluid margTop">
@@ -56,7 +60,9 @@
     <div class="col-lg-1 col-md-0 col-sm-0">
     </div>
     <div class="col-lg-5 col-md-8 col-sm-12">
-      <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+      <u><input type="submit" name="com_1" value="supprimer" class="nop">
+      <input type="submit" name="com_2" value="signaler" class="nop"></u>
+      <div class="card flex-md-row mb-4 shadow-sm h-md-250 hauteur">
         <div class="card-body d-flex flex-column align-items-start">
           <h3 class="mb-0">
             <a class="text-dark" href="#">{{$event->Title}}</a>
@@ -85,8 +91,10 @@
   </div>
   @endif
   @if ($loop->iteration % 2 == 0)
-  <div class="col-lg-5 col-md-6 col-sm-6">
-    <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+  <div class="col-lg-5 col-md-8 col-sm-12">
+    <u><input type="submit" name="com_1" value="supprimer" class="nop">
+      <input type="submit" name="com_2" value="signaler" class="nop"></u>
+    <div class="card flex-md-row mb-4 shadow-sm h-md-250 hauteur">
       <div class="card-body d-flex flex-column align-items-start">
         <h3 class="mb-0">
           <a class="text-dark" href="#">{{$event->Title}}</a>
@@ -109,8 +117,9 @@
         </div>
       </div>
     </div>
+
   </div>
-  <div class="col-6 col-lg-1 col-md-0 col-sm-0">
+  <div class="col-lg-1 col-md-0 col-sm-0">
   </div>
 </div>
 @endif
